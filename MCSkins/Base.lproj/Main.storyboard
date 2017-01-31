@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x24-Im-4Tg">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Skin List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SkinListViewController" customModule="MCSkins" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-AQ-it5">
+                                <rect key="frame" x="45.5" y="54" width="230" height="29"/>
+                                <segments>
+                                    <segment title="Recent"/>
+                                    <segment title="Trending"/>
+                                    <segment title="Favorites"/>
+                                </segments>
+                                <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ9-nW-FND">
+                                <rect key="frame" x="49" y="8" width="223" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nMd-Ik-kww"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wMh-r6-qr9">
+                                <rect key="frame" x="16" y="90" width="288" height="414"/>
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G36-1V-9qQ">
+                                    <size key="itemSize" width="67" height="91"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="skinCell" id="R4Y-Ft-Yy1" customClass="SkinCollectionViewCell" customModule="MCSkins" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="91"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="67" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skin Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DI-MS-vSi">
+                                                    <rect key="frame" x="3" y="48.5" width="60" height="34.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="igA-N5-b8J">
+                                                    <rect key="frame" x="3.5" y="8" width="60" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="igA-N5-b8J" secondAttribute="height" multiplier="121:81" id="qkC-t8-Hdg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3DI-MS-vSi" firstAttribute="top" secondItem="igA-N5-b8J" secondAttribute="bottom" id="4nt-vU-AF9"/>
+                                            <constraint firstItem="3DI-MS-vSi" firstAttribute="centerX" secondItem="igA-N5-b8J" secondAttribute="centerX" id="9oM-vq-K9z"/>
+                                            <constraint firstItem="igA-N5-b8J" firstAttribute="centerX" secondItem="R4Y-Ft-Yy1" secondAttribute="centerX" id="I3W-Zn-5TL"/>
+                                            <constraint firstItem="3DI-MS-vSi" firstAttribute="width" secondItem="igA-N5-b8J" secondAttribute="width" id="clE-a2-8WD"/>
+                                            <constraint firstItem="igA-N5-b8J" firstAttribute="width" secondItem="R4Y-Ft-Yy1" secondAttribute="width" multiplier="0.9" id="kKv-jK-LGP"/>
+                                            <constraint firstItem="igA-N5-b8J" firstAttribute="top" secondItem="R4Y-Ft-Yy1" secondAttribute="topMargin" id="mdY-Pl-6Xx"/>
+                                            <constraint firstItem="3DI-MS-vSi" firstAttribute="bottom" secondItem="R4Y-Ft-Yy1" secondAttribute="bottomMargin" id="sCv-dM-oEM"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="igA-N5-b8J" id="xCR-Zx-1B2"/>
+                                            <outlet property="skinNameTextField" destination="3DI-MS-vSi" id="63Y-So-IW8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="84x-LI-6pU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hjm-6E-SCE"/>
+                                </connections>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Original-Sony-banner" translatesAutoresizingMaskIntoConstraints="NO" id="GNm-YY-wFK">
+                                <rect key="frame" x="45" y="475.5" width="230" height="28.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GNm-YY-wFK" secondAttribute="height" multiplier="8:1" id="1WP-Wm-PCU"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oK6-0i-lko">
+                                <rect key="frame" x="49" y="8" width="223" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.92549019607843142" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oK6-0i-lko" firstAttribute="height" secondItem="rQ9-nW-FND" secondAttribute="height" id="0ht-bL-xbf"/>
+                            <constraint firstItem="GNm-YY-wFK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1WW-1q-acd"/>
+                            <constraint firstItem="oK6-0i-lko" firstAttribute="centerY" secondItem="rQ9-nW-FND" secondAttribute="centerY" id="6Fz-4M-zcf"/>
+                            <constraint firstItem="wwC-AQ-it5" firstAttribute="top" secondItem="rQ9-nW-FND" secondAttribute="bottom" constant="10" id="D5H-Sb-pGm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wMh-r6-qr9" secondAttribute="trailing" id="Hzq-Rc-Tsc"/>
+                            <constraint firstItem="rQ9-nW-FND" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kum-yc-bJt"/>
+                            <constraint firstItem="oK6-0i-lko" firstAttribute="width" secondItem="rQ9-nW-FND" secondAttribute="width" id="L7K-KJ-TIn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wMh-r6-qr9" secondAttribute="bottom" id="LrK-tH-cs2"/>
+                            <constraint firstItem="wwC-AQ-it5" firstAttribute="width" secondItem="wMh-r6-qr9" secondAttribute="width" multiplier="0.8" id="OOK-ln-XNg"/>
+                            <constraint firstItem="rQ9-nW-FND" firstAttribute="width" secondItem="wMh-r6-qr9" secondAttribute="width" constant="-65" id="VgZ-HL-sgC"/>
+                            <constraint firstItem="GNm-YY-wFK" firstAttribute="width" secondItem="wMh-r6-qr9" secondAttribute="width" multiplier="0.8" id="XRc-MD-enL"/>
+                            <constraint firstItem="wMh-r6-qr9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dF1-Z1-s6K"/>
+                            <constraint firstItem="wwC-AQ-it5" firstAttribute="centerX" secondItem="rQ9-nW-FND" secondAttribute="centerX" id="fQk-bh-v2n"/>
+                            <constraint firstItem="wMh-r6-qr9" firstAttribute="top" secondItem="wwC-AQ-it5" secondAttribute="bottom" constant="8" id="hr3-KB-4rp"/>
+                            <constraint firstItem="oK6-0i-lko" firstAttribute="centerX" secondItem="rQ9-nW-FND" secondAttribute="centerX" id="pjs-mC-wah"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GNm-YY-wFK" secondAttribute="bottom" id="qvm-rf-vJO"/>
+                            <constraint firstItem="rQ9-nW-FND" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="vmU-8i-Fej"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wMh-r6-qr9" secondAttribute="leading" id="yX7-e0-uGR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yA7-4E-Xfl">
+                        <barButtonItem key="leftBarButtonItem" image="search-3-xxl" id="9J2-Kr-6ED">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="searchBarButtonTapped:" destination="BYZ-38-t0r" id="jlT-Tc-gyN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Settings-3" id="tZ4-Uw-tjc">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="t3k-Uo-d4i" kind="show" id="7P3-vm-bwQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="categoryButton" destination="rQ9-nW-FND" id="VaL-8X-TCn"/>
+                        <outlet property="collectionViewOutlet" destination="wMh-r6-qr9" id="t0v-jp-ypP"/>
+                        <outlet property="pickerTextField" destination="oK6-0i-lko" id="rMW-jB-AwU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701.25" y="527.11267605633805"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Dyn-3g-bCO">
+            <objects>
+                <tableViewController id="t3k-Uo-d4i" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="JFr-Oe-2EQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Downloads" id="33p-At-l5M">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wvm-HX-M22">
+                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wvm-HX-M22" id="OfN-Xa-fwP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYl-UH-iKv">
+                                                    <rect key="frame" x="212" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Download Skins Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6V-Q2-nXm">
+                                                    <rect key="frame" x="8" y="11" width="164" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Help" id="Sng-ee-Nws">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NYa-2N-Lek">
+                                        <rect key="frame" x="0.0" y="157" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NYa-2N-Lek" id="BoL-le-ii4">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Suggest an Idea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFl-bX-0Ku">
+                                                    <rect key="frame" x="8" y="11" width="164" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LNY-GE-PEY">
+                                        <rect key="frame" x="0.0" y="201" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LNY-GE-PEY" id="aRk-yR-taV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Report a Problem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ll5-yW-O7d">
+                                                    <rect key="frame" x="8" y="11" width="164" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Spread the love" id="JmE-Hj-VJn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UR9-Y5-Id0">
+                                        <rect key="frame" x="0.0" y="302" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UR9-Y5-Id0" id="Pqq-bI-Lp1">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like the App? Review us!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9S-Ty-23a">
+                                                    <rect key="frame" x="8" y="11" width="172" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="akY-TF-hd4">
+                                        <rect key="frame" x="0.0" y="346" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="akY-TF-hd4" id="dPP-Qc-T6J">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like us on Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdz-DF-4JG">
+                                                    <rect key="frame" x="8" y="11" width="164" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="t3k-Uo-d4i" id="KNo-31-xVH"/>
+                            <outlet property="delegate" destination="t3k-Uo-d4i" id="sWj-Yk-N3C"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Id-MK-drv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="527"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yIK-kQ-YoU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x24-Im-4Tg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ViU-H0-JE1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1803921568627451" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.1803921568627451" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w8a-RC-mHn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pp7-55-gwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="530"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Original-Sony-banner" width="480" height="60"/>
+        <image name="Settings-3" width="22" height="22"/>
+        <image name="search-3-xxl" width="22" height="22"/>
+    </resources>
+</document>
